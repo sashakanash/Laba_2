@@ -31,7 +31,13 @@ class MainActivity : AppCompatActivity() {
         {
             return
         }
-        b.text = factorial(a).toString()
+        var otvet = 0F
+        for (i in 1..a)
+        {
+            otvet += 1 / factorial(i).toFloat()
+        }
+
+        b.text = otvet.toString()
     }
 
     fun factorial (n: Int): Int{
@@ -43,4 +49,6 @@ class MainActivity : AppCompatActivity() {
         }
         return result
     }
+
+
 }
